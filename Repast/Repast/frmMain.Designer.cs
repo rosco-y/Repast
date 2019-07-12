@@ -67,6 +67,7 @@
                         this.cmdAddCategory.TabIndex = 6;
                         this.cmdAddCategory.Text = "Add Category";
                         this.cmdAddCategory.UseVisualStyleBackColor = true;
+                        this.cmdAddCategory.Click += new System.EventHandler(this.CmdAddCategory_Click);
                         // 
                         // cmdRefreshCategories
                         // 
@@ -76,6 +77,7 @@
                         this.cmdRefreshCategories.TabIndex = 7;
                         this.cmdRefreshCategories.Text = "Refresh Category List";
                         this.cmdRefreshCategories.UseVisualStyleBackColor = true;
+                        this.cmdRefreshCategories.Click += new System.EventHandler(this.CmdRefreshCategories_Click);
                         // 
                         // frmMain
                         // 

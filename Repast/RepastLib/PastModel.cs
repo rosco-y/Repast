@@ -1,15 +1,17 @@
 ﻿using System;
 
+
 namespace RepastLib
 {
-        public class Categories
+        public class Category
         {
                 public long ID { get; set; }
                 public string CatName { get; set; }
 
         }
-        public class Sites
-        {
+        public class Site
+        { 
+
                 public long CatID { get; set; }
                 public long ID { get; set; }
                 public string SiteName { get; set; }
