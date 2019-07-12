@@ -14,9 +14,11 @@ namespace Repast
         public partial class frmMain : Form
         {
                 List<Category> _categories;
+                List<Site> _sites;
                 public frmMain()
                 {
                         _categories = new List<Category>();
+                        _sites = new List<Site>();
                         InitializeComponent();
                         loadCategorylist();
                 }
@@ -27,26 +29,57 @@ namespace Repast
                         c.CatName = txtCategoryName.Text;
                         sqliteDataAccess.AddCategory(c);
                         //_categories.Add(c);
-                        wireUpCategories();
+                        loadCategorylist();
                         txtCategoryName.Text = "";
                 }
 
                 void loadCategorylist()
                 {
                         _categories = sqliteDataAccess.LoadCategories();
-                        wireUpCategories();
+                        wireUpListBoxes();
                 }
 
-                void wireUpCategories()
+                void wireUpListBoxes()
                 {
+                        // Categories
                         lstCategories.DataSource = null;
                         lstCategories.DataSource = _categories;
                         lstCategories.DisplayMember = "CatName";
+
+                        // Sites
+                        lstSites.DataSource = null;
+                        lstSites.DataSource = _categories;
+                        lstSites.DisplayMember = "SiteName";
                 }
 
                 private void CmdRefreshCategories_Click(object sender, EventArgs e)
                 {
-                        wireUpCategories();
+                        wireUpListBoxes();
                 }
+
+                private void CmdAddSite_Click(object sender, EventArgs e)
+                {
+                        
+                        if (lstCategories.SelectedIndex >= 0)
+                        {
+                                Category cat = (Category)lstCategories.SelectedItem;
+
+                                Site s = new Site();
+                                s.SiteName = txtSiteName.Text;
+                                s.Password = txtPassword.Text;
+
+                                sqliteDataAccess.AddSite(cat.ID, s);
+                                wireUpListBoxes();
+                        }
+                }
+
+                //private void LstSites_SelectedIndexChanged(object sender, EventArgs e)
+                //{
+                //        if (lstSites.SelectedIndex >= 0)
+                //        {
+                //                Site S = (Site)lstSites.SelectedItem;
+
+                //        }
+                //}
         }
 }
