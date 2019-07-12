@@ -10,6 +10,7 @@ namespace RepastLib
 {
         public class sqliteDataAccess
         {
+                #region CATEGORIES
                 public static List<Category> LoadCategories()
                 {
                         using (IDbConnection cnn = new SQLiteConnection(loadConnectionString()))
@@ -23,14 +24,35 @@ namespace RepastLib
                 {
                         using (IDbConnection cnn = new SQLiteConnection(loadConnectionString()))
                         {
-                                string sql = $"Insert into Categories(CatName) values ({c.CatName});";
-                                cnn.Execute(sql);
+                                //string sql = $"Insert into Categories(CatName) values ({c.CatName});";
+                                cnn.Execute("Insert into Categories(CatName) values (@CatName)", c);
                         }
                 }
-
+                #endregion
                 private static string loadConnectionString(string id = "Default")
                 {
                         return "Data Source=.\\REPAST.DB;Version=3; providerName = System.Data.SqlClient";
                 }
+
+                #region SITES
+                public static List<Site> LoadSites()
+                {
+                        using (IDbConnection cnn = new SQLiteConnection(loadConnectionString()))
+                        {
+                                var output = cnn.Query<Site>("select * from Sites", new DynamicParameters());
+                                return output.ToList();
+                        }
+                }
+
+                public static void AddSite(int CatID, Site s)
+                {
+                        using (IDbConnection cnn = new SQLiteConnection(loadConnectionString()))
+                        {
+                                string sql = $"Insert into Sites(CatID, SiteName, Password) values ({CatID}, \'{s.SiteName}\', \'{s.Password}\')";
+                                cnn.Execute(sql);
+                               
+                        }
+                }             
+                #endregion
         }
 }
