@@ -21,14 +21,16 @@ namespace Repast
                         _sites = new List<Site>();
                         InitializeComponent();
                         loadCategorylist();
+                        loadSitesList();
                 }
 
+                #region CATEGORIES
                 private void CmdAddCategory_Click(object sender, EventArgs e)
                 {
                         Category c = new Category();
                         c.CatName = txtCategoryName.Text;
                         sqliteDataAccess.AddCategory(c);
-                        //_categories.Add(c);
+                        _categories.Add(c);
                         loadCategorylist();
                         txtCategoryName.Text = "";
                 }
@@ -38,6 +40,7 @@ namespace Repast
                         _categories = sqliteDataAccess.LoadCategories();
                         wireUpListBoxes();
                 }
+                #endregion
 
                 void wireUpListBoxes()
                 {
@@ -48,18 +51,28 @@ namespace Repast
 
                         // Sites
                         lstSites.DataSource = null;
-                        lstSites.DataSource = _categories;
+                        lstSites.DataSource = _sites;
                         lstSites.DisplayMember = "SiteName";
                 }
 
-                private void CmdRefreshCategories_Click(object sender, EventArgs e)
+                #region SITES
+                private void LstSites_SelectedIndexChanged(object sender, EventArgs e)
                 {
-                        wireUpListBoxes();
+                        if (lstSites.SelectedIndex >= 0)
+                        {
+                                Site S = (Site)lstSites.SelectedItem;
+
+                        }
                 }
 
+                void loadSitesList()
+                {
+                        _sites = sqliteDataAccess.LoadSites();
+                        wireUpListBoxes();
+                }
                 private void CmdAddSite_Click(object sender, EventArgs e)
                 {
-                        
+
                         if (lstCategories.SelectedIndex >= 0)
                         {
                                 Category cat = (Category)lstCategories.SelectedItem;
@@ -67,12 +80,23 @@ namespace Repast
                                 Site s = new Site();
                                 s.SiteName = txtSiteName.Text;
                                 s.Password = txtPassword.Text;
-
+                                _sites.Add(s);
+                                try
+                                {
+                                        sqliteDataAccess.AddSite(cat.ID, s);
+                                }
+                                catch (Exception x)
+                                {
+                                        MessageBox.Show($"Sqlite Error: {x.Message}");
+                                }
                                 sqliteDataAccess.AddSite(cat.ID, s);
                                 wireUpListBoxes();
                         }
                 }
+                #endregion
 
+
+                #region cmdBUTTONS
                 private void CmdOpenPasswordGenerator_Click(object sender, EventArgs e)
                 {
                         frmPasswordGenerator frmGen = new frmPasswordGenerator();
@@ -80,13 +104,11 @@ namespace Repast
                         frmGen.ShowDialog();
                 }
 
-                //private void LstSites_SelectedIndexChanged(object sender, EventArgs e)
-                //{
-                //        if (lstSites.SelectedIndex >= 0)
-                //        {
-                //                Site S = (Site)lstSites.SelectedItem;
+                private void CmdClose_Click(object sender, EventArgs e)
+                {
+                        this.Close();
+                }
 
-                //        }
-                //}
+                #endregion
         }
 }

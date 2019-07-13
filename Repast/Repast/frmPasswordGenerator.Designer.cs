@@ -48,13 +48,13 @@
                         this.cmdGeneratePassword = new System.Windows.Forms.Button();
                         this.txtGeneratedPassword = new System.Windows.Forms.TextBox();
                         this.chkSavePreferences = new System.Windows.Forms.CheckBox();
-                        this.button1 = new System.Windows.Forms.Button();
                         this.chkSpecial2 = new System.Windows.Forms.CheckBox();
                         this.label11 = new System.Windows.Forms.Label();
                         this.chkSpecial3 = new System.Windows.Forms.CheckBox();
                         this.label12 = new System.Windows.Forms.Label();
                         this.chkSpecial4 = new System.Windows.Forms.CheckBox();
                         this.label13 = new System.Windows.Forms.Label();
+                        this.cmdClose = new System.Windows.Forms.Button();
                         this.SuspendLayout();
                         // 
                         // txtPasswordLength
@@ -242,15 +242,6 @@
                         this.chkSavePreferences.Text = "For next use";
                         this.chkSavePreferences.UseVisualStyleBackColor = true;
                         // 
-                        // button1
-                        // 
-                        this.button1.Location = new System.Drawing.Point(168, 400);
-                        this.button1.Name = "button1";
-                        this.button1.Size = new System.Drawing.Size(75, 23);
-                        this.button1.TabIndex = 15;
-                        this.button1.Text = "Close";
-                        this.button1.UseVisualStyleBackColor = true;
-                        // 
                         // chkSpecial2
                         // 
                         this.chkSpecial2.AutoSize = true;
@@ -308,18 +299,28 @@
                         this.label13.TabIndex = 30;
                         this.label13.Text = "Special4";
                         // 
+                        // cmdClose
+                        // 
+                        this.cmdClose.Location = new System.Drawing.Point(114, 402);
+                        this.cmdClose.Name = "cmdClose";
+                        this.cmdClose.Size = new System.Drawing.Size(75, 23);
+                        this.cmdClose.TabIndex = 31;
+                        this.cmdClose.Text = "Close";
+                        this.cmdClose.UseVisualStyleBackColor = true;
+                        this.cmdClose.Click += new System.EventHandler(this.CmdClose_Click);
+                        // 
                         // frmPasswordGenerator
                         // 
                         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
                         this.ClientSize = new System.Drawing.Size(376, 466);
+                        this.Controls.Add(this.cmdClose);
                         this.Controls.Add(this.chkSpecial4);
                         this.Controls.Add(this.label13);
                         this.Controls.Add(this.chkSpecial3);
                         this.Controls.Add(this.label12);
                         this.Controls.Add(this.chkSpecial2);
                         this.Controls.Add(this.label11);
-                        this.Controls.Add(this.button1);
                         this.Controls.Add(this.chkSavePreferences);
                         this.Controls.Add(this.txtGeneratedPassword);
                         this.Controls.Add(this.cmdGeneratePassword);
@@ -372,12 +373,12 @@
                 private System.Windows.Forms.Button cmdGeneratePassword;
                 private System.Windows.Forms.TextBox txtGeneratedPassword;
                 private System.Windows.Forms.CheckBox chkSavePreferences;
-                private System.Windows.Forms.Button button1;
                 private System.Windows.Forms.CheckBox chkSpecial2;
                 private System.Windows.Forms.Label label11;
                 private System.Windows.Forms.CheckBox chkSpecial3;
                 private System.Windows.Forms.Label label12;
                 private System.Windows.Forms.CheckBox chkSpecial4;
                 private System.Windows.Forms.Label label13;
+                private System.Windows.Forms.Button cmdClose;
         }
 }

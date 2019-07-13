@@ -6,6 +6,8 @@ using System.Data.SQLite;
 using System.Linq;
 using System.Data;
 using Dapper;
+
+
 namespace RepastLib
 {
         public class sqliteDataAccess
@@ -48,8 +50,15 @@ namespace RepastLib
                 {
                         using (IDbConnection cnn = new SQLiteConnection(loadConnectionString()))
                         {
-                                string sql = $"Insert into Sites(CatID, SiteName, Password) values ({CatID}, \'{s.SiteName}\', \'{s.Password}\')";
-                                cnn.Execute(sql);
+                                try
+                                {
+                                        string sql = $"Insert into Sites(CatID, SiteName, Password) values ({CatID}, \'{s.SiteName}\', \'{s.Password}\')";
+                                        cnn.Execute(sql);
+                                }
+                                catch (SQLiteException x)
+                                {
+                                        throw x;
+                                }
                                
                         }
                 }             

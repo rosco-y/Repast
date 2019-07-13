@@ -46,5 +46,10 @@ namespace Repast
                                 MessageBox.Show("Illegal Password Length!", "Not Again!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }
                 }
+
+                private void CmdClose_Click(object sender, EventArgs e)
+                {
+                        this.Close();
+                }
         }
 }

@@ -41,6 +41,7 @@
                         this.label4 = new System.Windows.Forms.Label();
                         this.label5 = new System.Windows.Forms.Label();
                         this.cmdOpenPasswordGenerator = new System.Windows.Forms.Button();
+                        this.cmdClose = new System.Windows.Forms.Button();
                         this.SuspendLayout();
                         // 
                         // lstCategories
@@ -56,7 +57,7 @@
                         this.txtCategoryName.Location = new System.Drawing.Point(56, 60);
                         this.txtCategoryName.Name = "txtCategoryName";
                         this.txtCategoryName.Size = new System.Drawing.Size(146, 20);
-                        this.txtCategoryName.TabIndex = 1;
+                        this.txtCategoryName.TabIndex = 0;
                         // 
                         // label1
                         // 
@@ -72,7 +73,7 @@
                         this.cmdAddCategory.Location = new System.Drawing.Point(56, 90);
                         this.cmdAddCategory.Name = "cmdAddCategory";
                         this.cmdAddCategory.Size = new System.Drawing.Size(120, 23);
-                        this.cmdAddCategory.TabIndex = 6;
+                        this.cmdAddCategory.TabIndex = 1;
                         this.cmdAddCategory.Text = "Add Category";
                         this.cmdAddCategory.UseVisualStyleBackColor = true;
                         this.cmdAddCategory.Click += new System.EventHandler(this.CmdAddCategory_Click);
@@ -82,7 +83,7 @@
                         this.cmdAddSite.Location = new System.Drawing.Point(56, 321);
                         this.cmdAddSite.Name = "cmdAddSite";
                         this.cmdAddSite.Size = new System.Drawing.Size(120, 23);
-                        this.cmdAddSite.TabIndex = 11;
+                        this.cmdAddSite.TabIndex = 5;
                         this.cmdAddSite.Text = "Add Site";
                         this.cmdAddSite.UseVisualStyleBackColor = true;
                         this.cmdAddSite.Click += new System.EventHandler(this.CmdAddSite_Click);
@@ -101,7 +102,7 @@
                         this.txtSiteName.Location = new System.Drawing.Point(56, 232);
                         this.txtSiteName.Name = "txtSiteName";
                         this.txtSiteName.Size = new System.Drawing.Size(146, 20);
-                        this.txtSiteName.TabIndex = 9;
+                        this.txtSiteName.TabIndex = 2;
                         // 
                         // lstSites
                         // 
@@ -110,6 +111,7 @@
                         this.lstSites.Name = "lstSites";
                         this.lstSites.Size = new System.Drawing.Size(187, 290);
                         this.lstSites.TabIndex = 8;
+                        this.lstSites.SelectedIndexChanged += new System.EventHandler(this.LstSites_SelectedIndexChanged);
                         // 
                         // label3
                         // 
@@ -125,7 +127,7 @@
                         this.txtPassword.Location = new System.Drawing.Point(56, 283);
                         this.txtPassword.Name = "txtPassword";
                         this.txtPassword.Size = new System.Drawing.Size(146, 20);
-                        this.txtPassword.TabIndex = 13;
+                        this.txtPassword.TabIndex = 3;
                         // 
                         // label4
                         // 
@@ -150,16 +152,27 @@
                         this.cmdOpenPasswordGenerator.Location = new System.Drawing.Point(56, 390);
                         this.cmdOpenPasswordGenerator.Name = "cmdOpenPasswordGenerator";
                         this.cmdOpenPasswordGenerator.Size = new System.Drawing.Size(120, 23);
-                        this.cmdOpenPasswordGenerator.TabIndex = 17;
+                        this.cmdOpenPasswordGenerator.TabIndex = 4;
                         this.cmdOpenPasswordGenerator.Text = "Generate Password";
                         this.cmdOpenPasswordGenerator.UseVisualStyleBackColor = true;
                         this.cmdOpenPasswordGenerator.Click += new System.EventHandler(this.CmdOpenPasswordGenerator_Click);
+                        // 
+                        // cmdClose
+                        // 
+                        this.cmdClose.Location = new System.Drawing.Point(178, 461);
+                        this.cmdClose.Name = "cmdClose";
+                        this.cmdClose.Size = new System.Drawing.Size(69, 23);
+                        this.cmdClose.TabIndex = 6;
+                        this.cmdClose.Text = "Close";
+                        this.cmdClose.UseVisualStyleBackColor = true;
+                        this.cmdClose.Click += new System.EventHandler(this.CmdClose_Click);
                         // 
                         // frmMain
                         // 
                         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
                         this.ClientSize = new System.Drawing.Size(557, 517);
+                        this.Controls.Add(this.cmdClose);
                         this.Controls.Add(this.cmdOpenPasswordGenerator);
                         this.Controls.Add(this.label5);
                         this.Controls.Add(this.label4);
@@ -195,6 +208,7 @@
                 private System.Windows.Forms.Label label4;
                 private System.Windows.Forms.Label label5;
                 private System.Windows.Forms.Button cmdOpenPasswordGenerator;
+                private System.Windows.Forms.Button cmdClose;
         }
 }
 
