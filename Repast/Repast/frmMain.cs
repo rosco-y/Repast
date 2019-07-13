@@ -73,6 +73,13 @@ namespace Repast
                         }
                 }
 
+                private void CmdOpenPasswordGenerator_Click(object sender, EventArgs e)
+                {
+                        frmPasswordGenerator frmGen = new frmPasswordGenerator();
+
+                        frmGen.ShowDialog();
+                }
+
                 //private void LstSites_SelectedIndexChanged(object sender, EventArgs e)
                 //{
                 //        if (lstSites.SelectedIndex >= 0)

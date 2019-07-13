@@ -151,8 +151,9 @@
                         this.cmdOpenPasswordGenerator.Name = "cmdOpenPasswordGenerator";
                         this.cmdOpenPasswordGenerator.Size = new System.Drawing.Size(120, 23);
                         this.cmdOpenPasswordGenerator.TabIndex = 17;
-                        this.cmdOpenPasswordGenerator.Text = "Add Site";
+                        this.cmdOpenPasswordGenerator.Text = "Generate Password";
                         this.cmdOpenPasswordGenerator.UseVisualStyleBackColor = true;
+                        this.cmdOpenPasswordGenerator.Click += new System.EventHandler(this.CmdOpenPasswordGenerator_Click);
                         // 
                         // frmMain
                         // 
@@ -173,7 +174,7 @@
                         this.Controls.Add(this.txtCategoryName);
                         this.Controls.Add(this.lstCategories);
                         this.Name = "frmMain";
-                        this.Text = "Form1";
+                        this.Text = "Repast";
                         this.ResumeLayout(false);
                         this.PerformLayout();
 

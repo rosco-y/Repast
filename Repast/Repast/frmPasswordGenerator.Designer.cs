@@ -28,35 +28,41 @@
                 /// </summary>
                 private void InitializeComponent()
                 {
-                        this.textBox1 = new System.Windows.Forms.TextBox();
+                        this.txtPasswordLength = new System.Windows.Forms.TextBox();
                         this.label1 = new System.Windows.Forms.Label();
                         this.label2 = new System.Windows.Forms.Label();
-                        this.checkBox1 = new System.Windows.Forms.CheckBox();
-                        this.checkBox2 = new System.Windows.Forms.CheckBox();
+                        this.chkUpperCaseAlpha = new System.Windows.Forms.CheckBox();
+                        this.chkNumbers = new System.Windows.Forms.CheckBox();
                         this.label3 = new System.Windows.Forms.Label();
-                        this.checkBox3 = new System.Windows.Forms.CheckBox();
+                        this.chkLowerCaseAlpha = new System.Windows.Forms.CheckBox();
                         this.label4 = new System.Windows.Forms.Label();
-                        this.checkBox4 = new System.Windows.Forms.CheckBox();
+                        this.chkExcludeSimilarChars = new System.Windows.Forms.CheckBox();
                         this.label5 = new System.Windows.Forms.Label();
-                        this.checkBox5 = new System.Windows.Forms.CheckBox();
+                        this.chkExcludeAmbiguousChars = new System.Windows.Forms.CheckBox();
                         this.label6 = new System.Windows.Forms.Label();
-                        this.checkBox6 = new System.Windows.Forms.CheckBox();
+                        this.chkAutoClipboard = new System.Windows.Forms.CheckBox();
                         this.label7 = new System.Windows.Forms.Label();
-                        this.checkBox7 = new System.Windows.Forms.CheckBox();
+                        this.chkSpecial = new System.Windows.Forms.CheckBox();
                         this.label8 = new System.Windows.Forms.Label();
                         this.label9 = new System.Windows.Forms.Label();
                         this.cmdGeneratePassword = new System.Windows.Forms.Button();
-                        this.textBox2 = new System.Windows.Forms.TextBox();
-                        this.checkBox8 = new System.Windows.Forms.CheckBox();
+                        this.txtGeneratedPassword = new System.Windows.Forms.TextBox();
+                        this.chkSavePreferences = new System.Windows.Forms.CheckBox();
                         this.button1 = new System.Windows.Forms.Button();
+                        this.chkSpecial2 = new System.Windows.Forms.CheckBox();
+                        this.label11 = new System.Windows.Forms.Label();
+                        this.chkSpecial3 = new System.Windows.Forms.CheckBox();
+                        this.label12 = new System.Windows.Forms.Label();
+                        this.chkSpecial4 = new System.Windows.Forms.CheckBox();
+                        this.label13 = new System.Windows.Forms.Label();
                         this.SuspendLayout();
                         // 
-                        // textBox1
+                        // txtPasswordLength
                         // 
-                        this.textBox1.Location = new System.Drawing.Point(169, 38);
-                        this.textBox1.Name = "textBox1";
-                        this.textBox1.Size = new System.Drawing.Size(100, 20);
-                        this.textBox1.TabIndex = 0;
+                        this.txtPasswordLength.Location = new System.Drawing.Point(169, 38);
+                        this.txtPasswordLength.Name = "txtPasswordLength";
+                        this.txtPasswordLength.Size = new System.Drawing.Size(100, 20);
+                        this.txtPasswordLength.TabIndex = 0;
                         // 
                         // label1
                         // 
@@ -72,129 +78,129 @@
                         this.label2.AutoSize = true;
                         this.label2.Location = new System.Drawing.Point(12, 68);
                         this.label2.Name = "label2";
-                        this.label2.Size = new System.Drawing.Size(46, 13);
+                        this.label2.Size = new System.Drawing.Size(42, 13);
                         this.label2.TabIndex = 2;
-                        this.label2.Text = "Symbols";
+                        this.label2.Text = "Special";
                         // 
-                        // checkBox1
+                        // chkUpperCaseAlpha
                         // 
-                        this.checkBox1.AutoSize = true;
-                        this.checkBox1.Location = new System.Drawing.Point(169, 133);
-                        this.checkBox1.Name = "checkBox1";
-                        this.checkBox1.Size = new System.Drawing.Size(89, 17);
-                        this.checkBox1.TabIndex = 3;
-                        this.checkBox1.Text = "(e.g. ABCDE)";
-                        this.checkBox1.UseVisualStyleBackColor = true;
+                        this.chkUpperCaseAlpha.AutoSize = true;
+                        this.chkUpperCaseAlpha.Location = new System.Drawing.Point(169, 197);
+                        this.chkUpperCaseAlpha.Name = "chkUpperCaseAlpha";
+                        this.chkUpperCaseAlpha.Size = new System.Drawing.Size(89, 17);
+                        this.chkUpperCaseAlpha.TabIndex = 8;
+                        this.chkUpperCaseAlpha.Text = "(e.g. ABCDE)";
+                        this.chkUpperCaseAlpha.UseVisualStyleBackColor = true;
                         // 
-                        // checkBox2
+                        // chkNumbers
                         // 
-                        this.checkBox2.AutoSize = true;
-                        this.checkBox2.Location = new System.Drawing.Point(169, 91);
-                        this.checkBox2.Name = "checkBox2";
-                        this.checkBox2.Size = new System.Drawing.Size(92, 17);
-                        this.checkBox2.TabIndex = 5;
-                        this.checkBox2.Text = "(e. g. 123456)";
-                        this.checkBox2.UseVisualStyleBackColor = true;
+                        this.chkNumbers.AutoSize = true;
+                        this.chkNumbers.Location = new System.Drawing.Point(169, 155);
+                        this.chkNumbers.Name = "chkNumbers";
+                        this.chkNumbers.Size = new System.Drawing.Size(92, 17);
+                        this.chkNumbers.TabIndex = 6;
+                        this.chkNumbers.Text = "(e. g. 123456)";
+                        this.chkNumbers.UseVisualStyleBackColor = true;
                         // 
                         // label3
                         // 
                         this.label3.AutoSize = true;
-                        this.label3.Location = new System.Drawing.Point(12, 91);
+                        this.label3.Location = new System.Drawing.Point(12, 155);
                         this.label3.Name = "label3";
                         this.label3.Size = new System.Drawing.Size(49, 13);
                         this.label3.TabIndex = 4;
                         this.label3.Text = "Numbers";
                         // 
-                        // checkBox3
+                        // chkLowerCaseAlpha
                         // 
-                        this.checkBox3.AutoSize = true;
-                        this.checkBox3.Location = new System.Drawing.Point(168, 114);
-                        this.checkBox3.Name = "checkBox3";
-                        this.checkBox3.Size = new System.Drawing.Size(86, 17);
-                        this.checkBox3.TabIndex = 7;
-                        this.checkBox3.Text = "(e. g. abcde)";
-                        this.checkBox3.UseVisualStyleBackColor = true;
+                        this.chkLowerCaseAlpha.AutoSize = true;
+                        this.chkLowerCaseAlpha.Location = new System.Drawing.Point(168, 178);
+                        this.chkLowerCaseAlpha.Name = "chkLowerCaseAlpha";
+                        this.chkLowerCaseAlpha.Size = new System.Drawing.Size(86, 17);
+                        this.chkLowerCaseAlpha.TabIndex = 7;
+                        this.chkLowerCaseAlpha.Text = "(e. g. abcde)";
+                        this.chkLowerCaseAlpha.UseVisualStyleBackColor = true;
                         // 
                         // label4
                         // 
                         this.label4.AutoSize = true;
-                        this.label4.Location = new System.Drawing.Point(12, 114);
+                        this.label4.Location = new System.Drawing.Point(12, 178);
                         this.label4.Name = "label4";
                         this.label4.Size = new System.Drawing.Size(59, 13);
                         this.label4.TabIndex = 6;
                         this.label4.Text = "Lowercase";
                         // 
-                        // checkBox4
+                        // chkExcludeSimilarChars
                         // 
-                        this.checkBox4.AutoSize = true;
-                        this.checkBox4.Location = new System.Drawing.Point(169, 156);
-                        this.checkBox4.Name = "checkBox4";
-                        this.checkBox4.Size = new System.Drawing.Size(132, 17);
-                        this.checkBox4.TabIndex = 9;
-                        this.checkBox4.Text = "(e. g. i, I, 1, L, o, O, 0 )";
-                        this.checkBox4.UseVisualStyleBackColor = true;
+                        this.chkExcludeSimilarChars.AutoSize = true;
+                        this.chkExcludeSimilarChars.Location = new System.Drawing.Point(169, 220);
+                        this.chkExcludeSimilarChars.Name = "chkExcludeSimilarChars";
+                        this.chkExcludeSimilarChars.Size = new System.Drawing.Size(132, 17);
+                        this.chkExcludeSimilarChars.TabIndex = 9;
+                        this.chkExcludeSimilarChars.Text = "(e. g. i, I, 1, L, o, O, 0 )";
+                        this.chkExcludeSimilarChars.UseVisualStyleBackColor = true;
                         // 
                         // label5
                         // 
                         this.label5.AutoSize = true;
-                        this.label5.Location = new System.Drawing.Point(12, 137);
+                        this.label5.Location = new System.Drawing.Point(12, 201);
                         this.label5.Name = "label5";
                         this.label5.Size = new System.Drawing.Size(59, 13);
                         this.label5.TabIndex = 8;
                         this.label5.Text = "Uppercase";
                         // 
-                        // checkBox5
+                        // chkExcludeAmbiguousChars
                         // 
-                        this.checkBox5.AutoSize = true;
-                        this.checkBox5.Location = new System.Drawing.Point(169, 179);
-                        this.checkBox5.Name = "checkBox5";
-                        this.checkBox5.Size = new System.Drawing.Size(130, 17);
-                        this.checkBox5.TabIndex = 11;
-                        this.checkBox5.Text = "(e. g. ({}[]()/\\\'\"`~,;:.<>)";
-                        this.checkBox5.UseVisualStyleBackColor = true;
+                        this.chkExcludeAmbiguousChars.AutoSize = true;
+                        this.chkExcludeAmbiguousChars.Location = new System.Drawing.Point(169, 243);
+                        this.chkExcludeAmbiguousChars.Name = "chkExcludeAmbiguousChars";
+                        this.chkExcludeAmbiguousChars.Size = new System.Drawing.Size(130, 17);
+                        this.chkExcludeAmbiguousChars.TabIndex = 10;
+                        this.chkExcludeAmbiguousChars.Text = "(e. g. ({}[]()/\\\'\"`~,;:.<>)";
+                        this.chkExcludeAmbiguousChars.UseVisualStyleBackColor = true;
                         // 
                         // label6
                         // 
                         this.label6.AutoSize = true;
-                        this.label6.Location = new System.Drawing.Point(12, 160);
+                        this.label6.Location = new System.Drawing.Point(12, 224);
                         this.label6.Name = "label6";
                         this.label6.Size = new System.Drawing.Size(108, 13);
                         this.label6.TabIndex = 10;
                         this.label6.Text = "Exclude Similar Chars";
                         // 
-                        // checkBox6
+                        // chkAutoClipboard
                         // 
-                        this.checkBox6.AutoSize = true;
-                        this.checkBox6.Location = new System.Drawing.Point(169, 202);
-                        this.checkBox6.Name = "checkBox6";
-                        this.checkBox6.Size = new System.Drawing.Size(174, 17);
-                        this.checkBox6.TabIndex = 13;
-                        this.checkBox6.Text = "Automatically copy to ClipBoard";
-                        this.checkBox6.UseVisualStyleBackColor = true;
+                        this.chkAutoClipboard.AutoSize = true;
+                        this.chkAutoClipboard.Location = new System.Drawing.Point(169, 266);
+                        this.chkAutoClipboard.Name = "chkAutoClipboard";
+                        this.chkAutoClipboard.Size = new System.Drawing.Size(174, 17);
+                        this.chkAutoClipboard.TabIndex = 11;
+                        this.chkAutoClipboard.Text = "Automatically copy to ClipBoard";
+                        this.chkAutoClipboard.UseVisualStyleBackColor = true;
                         // 
                         // label7
                         // 
                         this.label7.AutoSize = true;
-                        this.label7.Location = new System.Drawing.Point(12, 183);
+                        this.label7.Location = new System.Drawing.Point(12, 247);
                         this.label7.Name = "label7";
                         this.label7.Size = new System.Drawing.Size(130, 13);
                         this.label7.TabIndex = 12;
                         this.label7.Text = "Exclude Ambiguous Chars";
                         // 
-                        // checkBox7
+                        // chkSpecial
                         // 
-                        this.checkBox7.AutoSize = true;
-                        this.checkBox7.Location = new System.Drawing.Point(169, 64);
-                        this.checkBox7.Name = "checkBox7";
-                        this.checkBox7.Size = new System.Drawing.Size(85, 17);
-                        this.checkBox7.TabIndex = 15;
-                        this.checkBox7.Text = "(e.g. @#$%)";
-                        this.checkBox7.UseVisualStyleBackColor = true;
+                        this.chkSpecial.AutoSize = true;
+                        this.chkSpecial.Location = new System.Drawing.Point(169, 64);
+                        this.chkSpecial.Name = "chkSpecial";
+                        this.chkSpecial.Size = new System.Drawing.Size(128, 17);
+                        this.chkSpecial.TabIndex = 1;
+                        this.chkSpecial.Text = "! \" # $ % && \' ( ) + , - . /";
+                        this.chkSpecial.UseVisualStyleBackColor = true;
                         // 
                         // label8
                         // 
                         this.label8.AutoSize = true;
-                        this.label8.Location = new System.Drawing.Point(12, 206);
+                        this.label8.Location = new System.Drawing.Point(12, 270);
                         this.label8.Name = "label8";
                         this.label8.Size = new System.Drawing.Size(76, 13);
                         this.label8.TabIndex = 14;
@@ -203,7 +209,7 @@
                         // label9
                         // 
                         this.label9.AutoSize = true;
-                        this.label9.Location = new System.Drawing.Point(12, 229);
+                        this.label9.Location = new System.Drawing.Point(12, 293);
                         this.label9.Name = "label9";
                         this.label9.Size = new System.Drawing.Size(107, 13);
                         this.label9.TabIndex = 16;
@@ -211,65 +217,132 @@
                         // 
                         // cmdGeneratePassword
                         // 
-                        this.cmdGeneratePassword.Location = new System.Drawing.Point(15, 290);
+                        this.cmdGeneratePassword.Location = new System.Drawing.Point(14, 329);
                         this.cmdGeneratePassword.Name = "cmdGeneratePassword";
                         this.cmdGeneratePassword.Size = new System.Drawing.Size(122, 23);
-                        this.cmdGeneratePassword.TabIndex = 20;
+                        this.cmdGeneratePassword.TabIndex = 13;
                         this.cmdGeneratePassword.Text = "Generate Password";
                         this.cmdGeneratePassword.UseVisualStyleBackColor = true;
+                        this.cmdGeneratePassword.Click += new System.EventHandler(this.CmdGeneratePassword_Click);
                         // 
-                        // textBox2
+                        // txtGeneratedPassword
                         // 
-                        this.textBox2.Location = new System.Drawing.Point(15, 319);
-                        this.textBox2.Name = "textBox2";
-                        this.textBox2.Size = new System.Drawing.Size(254, 20);
-                        this.textBox2.TabIndex = 21;
+                        this.txtGeneratedPassword.Location = new System.Drawing.Point(14, 358);
+                        this.txtGeneratedPassword.Name = "txtGeneratedPassword";
+                        this.txtGeneratedPassword.Size = new System.Drawing.Size(254, 20);
+                        this.txtGeneratedPassword.TabIndex = 14;
                         // 
-                        // checkBox8
+                        // chkSavePreferences
                         // 
-                        this.checkBox8.AutoSize = true;
-                        this.checkBox8.Location = new System.Drawing.Point(169, 225);
-                        this.checkBox8.Name = "checkBox8";
-                        this.checkBox8.Size = new System.Drawing.Size(84, 17);
-                        this.checkBox8.TabIndex = 22;
-                        this.checkBox8.Text = "For next use";
-                        this.checkBox8.UseVisualStyleBackColor = true;
+                        this.chkSavePreferences.AutoSize = true;
+                        this.chkSavePreferences.Location = new System.Drawing.Point(169, 289);
+                        this.chkSavePreferences.Name = "chkSavePreferences";
+                        this.chkSavePreferences.Size = new System.Drawing.Size(84, 17);
+                        this.chkSavePreferences.TabIndex = 12;
+                        this.chkSavePreferences.Text = "For next use";
+                        this.chkSavePreferences.UseVisualStyleBackColor = true;
                         // 
                         // button1
                         // 
-                        this.button1.Location = new System.Drawing.Point(169, 355);
+                        this.button1.Location = new System.Drawing.Point(168, 400);
                         this.button1.Name = "button1";
                         this.button1.Size = new System.Drawing.Size(75, 23);
-                        this.button1.TabIndex = 23;
+                        this.button1.TabIndex = 15;
                         this.button1.Text = "Close";
                         this.button1.UseVisualStyleBackColor = true;
+                        // 
+                        // chkSpecial2
+                        // 
+                        this.chkSpecial2.AutoSize = true;
+                        this.chkSpecial2.Location = new System.Drawing.Point(169, 86);
+                        this.chkSpecial2.Name = "chkSpecial2";
+                        this.chkSpecial2.Size = new System.Drawing.Size(85, 17);
+                        this.chkSpecial2.TabIndex = 3;
+                        this.chkSpecial2.Text = ": ; < = > ? @";
+                        this.chkSpecial2.UseVisualStyleBackColor = true;
+                        // 
+                        // label11
+                        // 
+                        this.label11.AutoSize = true;
+                        this.label11.Location = new System.Drawing.Point(12, 90);
+                        this.label11.Name = "label11";
+                        this.label11.Size = new System.Drawing.Size(48, 13);
+                        this.label11.TabIndex = 26;
+                        this.label11.Text = "Special2";
+                        // 
+                        // chkSpecial3
+                        // 
+                        this.chkSpecial3.AutoSize = true;
+                        this.chkSpecial3.Location = new System.Drawing.Point(169, 111);
+                        this.chkSpecial3.Name = "chkSpecial3";
+                        this.chkSpecial3.Size = new System.Drawing.Size(67, 17);
+                        this.chkSpecial3.TabIndex = 4;
+                        this.chkSpecial3.Text = "[ \\ ] ^ _ `";
+                        this.chkSpecial3.UseVisualStyleBackColor = true;
+                        // 
+                        // label12
+                        // 
+                        this.label12.AutoSize = true;
+                        this.label12.Location = new System.Drawing.Point(12, 115);
+                        this.label12.Name = "label12";
+                        this.label12.Size = new System.Drawing.Size(48, 13);
+                        this.label12.TabIndex = 28;
+                        this.label12.Text = "Special3";
+                        // 
+                        // chkSpecial4
+                        // 
+                        this.chkSpecial4.AutoSize = true;
+                        this.chkSpecial4.Location = new System.Drawing.Point(169, 133);
+                        this.chkSpecial4.Name = "chkSpecial4";
+                        this.chkSpecial4.Size = new System.Drawing.Size(52, 17);
+                        this.chkSpecial4.TabIndex = 5;
+                        this.chkSpecial4.Text = "{ | } ~";
+                        this.chkSpecial4.UseVisualStyleBackColor = true;
+                        // 
+                        // label13
+                        // 
+                        this.label13.AutoSize = true;
+                        this.label13.Location = new System.Drawing.Point(12, 137);
+                        this.label13.Name = "label13";
+                        this.label13.Size = new System.Drawing.Size(48, 13);
+                        this.label13.TabIndex = 30;
+                        this.label13.Text = "Special4";
                         // 
                         // frmPasswordGenerator
                         // 
                         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-                        this.ClientSize = new System.Drawing.Size(457, 390);
+                        this.ClientSize = new System.Drawing.Size(376, 466);
+                        this.Controls.Add(this.chkSpecial4);
+                        this.Controls.Add(this.label13);
+                        this.Controls.Add(this.chkSpecial3);
+                        this.Controls.Add(this.label12);
+                        this.Controls.Add(this.chkSpecial2);
+                        this.Controls.Add(this.label11);
                         this.Controls.Add(this.button1);
-                        this.Controls.Add(this.checkBox8);
-                        this.Controls.Add(this.textBox2);
+                        this.Controls.Add(this.chkSavePreferences);
+                        this.Controls.Add(this.txtGeneratedPassword);
                         this.Controls.Add(this.cmdGeneratePassword);
                         this.Controls.Add(this.label9);
-                        this.Controls.Add(this.checkBox7);
+                        this.Controls.Add(this.chkSpecial);
                         this.Controls.Add(this.label8);
-                        this.Controls.Add(this.checkBox6);
+                        this.Controls.Add(this.chkAutoClipboard);
                         this.Controls.Add(this.label7);
-                        this.Controls.Add(this.checkBox5);
+                        this.Controls.Add(this.chkExcludeAmbiguousChars);
                         this.Controls.Add(this.label6);
-                        this.Controls.Add(this.checkBox4);
+                        this.Controls.Add(this.chkExcludeSimilarChars);
                         this.Controls.Add(this.label5);
-                        this.Controls.Add(this.checkBox3);
+                        this.Controls.Add(this.chkLowerCaseAlpha);
                         this.Controls.Add(this.label4);
-                        this.Controls.Add(this.checkBox2);
+                        this.Controls.Add(this.chkNumbers);
                         this.Controls.Add(this.label3);
-                        this.Controls.Add(this.checkBox1);
+                        this.Controls.Add(this.chkUpperCaseAlpha);
                         this.Controls.Add(this.label2);
                         this.Controls.Add(this.label1);
-                        this.Controls.Add(this.textBox1);
+                        this.Controls.Add(this.txtPasswordLength);
+                        this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+                        this.MaximizeBox = false;
+                        this.MinimizeBox = false;
                         this.Name = "frmPasswordGenerator";
                         this.Text = "frmPasswordGenerator";
                         this.ResumeLayout(false);
@@ -279,26 +352,32 @@
 
                 #endregion
 
-                private System.Windows.Forms.TextBox textBox1;
+                private System.Windows.Forms.TextBox txtPasswordLength;
                 private System.Windows.Forms.Label label1;
                 private System.Windows.Forms.Label label2;
-                private System.Windows.Forms.CheckBox checkBox1;
-                private System.Windows.Forms.CheckBox checkBox2;
+                private System.Windows.Forms.CheckBox chkUpperCaseAlpha;
+                private System.Windows.Forms.CheckBox chkNumbers;
                 private System.Windows.Forms.Label label3;
-                private System.Windows.Forms.CheckBox checkBox3;
+                private System.Windows.Forms.CheckBox chkLowerCaseAlpha;
                 private System.Windows.Forms.Label label4;
-                private System.Windows.Forms.CheckBox checkBox4;
+                private System.Windows.Forms.CheckBox chkExcludeSimilarChars;
                 private System.Windows.Forms.Label label5;
-                private System.Windows.Forms.CheckBox checkBox5;
+                private System.Windows.Forms.CheckBox chkExcludeAmbiguousChars;
                 private System.Windows.Forms.Label label6;
-                private System.Windows.Forms.CheckBox checkBox6;
+                private System.Windows.Forms.CheckBox chkAutoClipboard;
                 private System.Windows.Forms.Label label7;
-                private System.Windows.Forms.CheckBox checkBox7;
+                private System.Windows.Forms.CheckBox chkSpecial;
                 private System.Windows.Forms.Label label8;
                 private System.Windows.Forms.Label label9;
                 private System.Windows.Forms.Button cmdGeneratePassword;
-                private System.Windows.Forms.TextBox textBox2;
-                private System.Windows.Forms.CheckBox checkBox8;
+                private System.Windows.Forms.TextBox txtGeneratedPassword;
+                private System.Windows.Forms.CheckBox chkSavePreferences;
                 private System.Windows.Forms.Button button1;
+                private System.Windows.Forms.CheckBox chkSpecial2;
+                private System.Windows.Forms.Label label11;
+                private System.Windows.Forms.CheckBox chkSpecial3;
+                private System.Windows.Forms.Label label12;
+                private System.Windows.Forms.CheckBox chkSpecial4;
+                private System.Windows.Forms.Label label13;
         }
 }
