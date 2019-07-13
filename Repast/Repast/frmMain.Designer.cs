@@ -40,6 +40,7 @@
                         this.txtPassword = new System.Windows.Forms.TextBox();
                         this.label4 = new System.Windows.Forms.Label();
                         this.label5 = new System.Windows.Forms.Label();
+                        this.cmdOpenPasswordGenerator = new System.Windows.Forms.Button();
                         this.SuspendLayout();
                         // 
                         // lstCategories
@@ -109,7 +110,6 @@
                         this.lstSites.Name = "lstSites";
                         this.lstSites.Size = new System.Drawing.Size(187, 290);
                         this.lstSites.TabIndex = 8;
-                        //this.lstSites.SelectedIndexChanged += new System.EventHandler(this.LstSites_SelectedIndexChanged);
                         // 
                         // label3
                         // 
@@ -145,11 +145,21 @@
                         this.label5.TabIndex = 16;
                         this.label5.Text = "Caegories";
                         // 
+                        // cmdOpenPasswordGenerator
+                        // 
+                        this.cmdOpenPasswordGenerator.Location = new System.Drawing.Point(56, 390);
+                        this.cmdOpenPasswordGenerator.Name = "cmdOpenPasswordGenerator";
+                        this.cmdOpenPasswordGenerator.Size = new System.Drawing.Size(120, 23);
+                        this.cmdOpenPasswordGenerator.TabIndex = 17;
+                        this.cmdOpenPasswordGenerator.Text = "Add Site";
+                        this.cmdOpenPasswordGenerator.UseVisualStyleBackColor = true;
+                        // 
                         // frmMain
                         // 
                         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
                         this.ClientSize = new System.Drawing.Size(557, 517);
+                        this.Controls.Add(this.cmdOpenPasswordGenerator);
                         this.Controls.Add(this.label5);
                         this.Controls.Add(this.label4);
                         this.Controls.Add(this.label3);
@@ -183,6 +193,7 @@
                 private System.Windows.Forms.TextBox txtPassword;
                 private System.Windows.Forms.Label label4;
                 private System.Windows.Forms.Label label5;
+                private System.Windows.Forms.Button cmdOpenPasswordGenerator;
         }
 }
 
